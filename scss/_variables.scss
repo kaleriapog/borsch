@@ -1,0 +1,94 @@
+%font-style-header-menu {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+%font-main-title {
+  font-size: 74px;
+  line-height: 1.21;
+}
+
+%font-title-small {
+  font-size: 30px;
+  line-height: 1.33;
+}
+
+%font-item-title {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+%font-regular {
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+%font-regular-title {
+  font-size: 64px;
+  line-height: 1.25;
+}
+
+%font-title-number {
+  font-size: 74px;
+  line-height: 1.21;
+}
+
+%font-title-number-name {
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+//color
+$color-white: #fff;
+$background-color-icon-regular: #fff;
+$background-color-icon-second: #EFF1F4;
+$background-color: #DC384E;
+$background-color-light: #F25570;
+$color-text-dark: #333333;
+
+// mixin for media width
+$mediaWidthMobileSmall-360: 360px;
+$mediaWidthMobileSmall: 320px;
+$mediaWidthMobile: 767px;
+$mediaWidthTablet: 991px;
+$mediaWidthTabletLarge: 1024px;
+$mediaWidthTabletHorizontal: 1024px;
+$mediaWidthLaptop: 1024px;
+
+
+@mixin media-tablet {
+  @media (max-width: $mediaWidthTablet) {
+    @content;
+  }
+}
+
+@mixin media-tablet-horizontal {
+  @media (max-height: $mediaWidthTabletHorizontal) {
+    @content;
+  }
+}
+
+@mixin media-tablet-large {
+  @media (max-width: $mediaWidthTabletLarge) {
+    @content;
+  }
+}
+
+@mixin media-laptop {
+  @media (max-width: $mediaWidthLaptop) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: $mediaWidthMobile) {
+    @content;
+  }
+}
+
+@mixin media-mobile-small {
+  @media (max-width: $mediaWidthMobileSmall) {
+    @content;
+  }
+}
