@@ -52,14 +52,14 @@ $mediaWidthLaptop: 1024px;
 %font-main-title {
   font-size: 74px;
   line-height: 1.21;
-  font-family: NAMU;
+  font-family: 'NAMU';
   font-weight: 500;
 }
 
 %font-title-small {
   font-size: 30px;
   line-height: 1.33;
-  font-family: NAMU;
+  font-family: 'NAMU';
   font-weight: 500;
 }
 
@@ -80,7 +80,7 @@ $mediaWidthLaptop: 1024px;
 %font-regular-title {
   font-size: 64px;
   line-height: 1.25;
-  font-family: NAMU;
+  font-family: 'NAMU';
   font-weight: 500;
 
   @include media-mobile {
@@ -109,7 +109,7 @@ $mediaWidthLaptop: 1024px;
 }
 
 %font-product-name {
-  font-family: NAMU;
+  font-family: 'NAMU';
   font-weight: 500;
   font-size: 30px;
   line-height: 1.33;
@@ -137,7 +137,7 @@ $mediaWidthLaptop: 1024px;
 }
 
 %font-price {
-  font-family: NAMU;
+  font-family: 'NAMU';
   font-weight: 500;
   font-size: 30px;
   line-height: 1.33;
