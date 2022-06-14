@@ -351,7 +351,7 @@ h1, .main-title {
 
   &__social-list {
     display: flex;
-    @extend %font-social;
+    @extend %font-icon;
 
     li {
       margin-right: 20px;
@@ -873,7 +873,7 @@ h1, .main-title {
 
      &__user-name {
        display: block;
-       @extend %user-name;
+       @extend %media-title;
      }
 
      &.swiper-slide-active {

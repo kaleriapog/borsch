@@ -2,8 +2,8 @@ const tabNavigationMeat = document.getElementById('tab-navigation-meat')
 const tabNavigationVegan = document.getElementById('tab-navigation-vegan')
 const tabProductMeat = document.getElementById('tab-product-meat')
 const tabProductVegan = document.getElementById('tab-product-vegan')
-const accordion = document.querySelector('.accordion-list');
-const items = accordion.querySelectorAll('.accordion-list-item');
+const accordion = document.querySelector('.accordion-list')
+const items = accordion.querySelectorAll('.accordion-list-item')
 
 // for tabs
 tabNavigationMeat.addEventListener('click', (el) => {
@@ -42,7 +42,7 @@ const swiperReviews = new Swiper('.reviews__slider', {
         nextEl: '.reviews__button-next',
         prevEl: '.reviews__button-prev',
     },
-});
+})
 
 // for media slider
 const swiperMedia = new Swiper('.media-about-us__slider', {
@@ -67,7 +67,7 @@ const swiperMedia = new Swiper('.media-about-us__slider', {
         nextEl: '.media-about-us__button-next',
         prevEl: '.media-about-us__button-prev',
     },
-});
+})
 
 // for accordion
 function toggleAccordion() {
@@ -87,7 +87,20 @@ function toggleAccordion() {
     console.log(thisItem)
 }
 
-items.forEach(question => question.addEventListener('click', toggleAccordion));
+items.forEach(question => question.addEventListener('click', toggleAccordion))
 
+//for open our-details
+const ourDetailsIconClose = document.querySelector('.our-details-icon-close')
+const ourDetailsBlock = document.querySelector('.our-details')
+const ourDetailsTrigger = document.querySelectorAll('.open-our-details-trigger');
 
+ourDetailsTrigger.forEach((elem) => {
+    elem.addEventListener('click', () => {
+        ourDetailsBlock.classList.add('open-our-details')
+    })
+})
+
+ourDetailsIconClose.addEventListener('click', () => {
+    ourDetailsBlock.classList.remove('open-our-details')
+})
 

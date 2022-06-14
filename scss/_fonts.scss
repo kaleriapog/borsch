@@ -61,28 +61,23 @@
   font-style: normal;
   font-display: block;
 }
-//
-//[class^="icon-"], [class*=" icon-"] {
-//  /* use !important to prevent issues with browser extensions that change fonts */
-//  font-family: 'icomoon' !important;
-//  speak: never;
-//  font-style: normal;
-//  font-weight: normal;
-//  font-variant: normal;
-//  text-transform: none;
-//  line-height: 1;
-//
-//  /* Better Font Rendering =========== */
-//  -webkit-font-smoothing: antialiased;
-//  -moz-osx-font-smoothing: grayscale;
-//}
 
 .icon-facebook:before {
   content: "\e900";
+  font-family: 'icomoon';
 }
+
 .icon-instagram:before {
   content: "\e901";
+  font-family: 'icomoon';
 }
+
 .icon-telegram:before {
   content: "\e902";
+  font-family: 'icomoon';
+}
+
+.icon-cross:before {
+  content: "\e903";
+  font-family: 'icomoon';
 }

@@ -49,7 +49,6 @@ $mediaWidth-1200: 1200px;
   }
 }
 
-
 //font
 %font-style-header-menu {
   font-size: 16px;
@@ -155,16 +154,6 @@ $mediaWidth-1200: 1200px;
   }
 }
 
-%user-name {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.4;
-
-  @include media-mobile {
-    font-size: 14px;
-  }
-}
-
 %media-title {
   font-size: 20px;
   font-weight: 600;
@@ -201,14 +190,18 @@ $mediaWidth-1200: 1200px;
   }
 }
 
-%font-social {
-  font-family: 'icomoon';
+%font-icon {
   font-size: 24px;
 }
 
 %font-rights {
   font-size: 14px;
   line-height: 1.57;
+}
+
+%font-mini {
+  font-size: 48px;
+  line-height: 1.2;
 }
 
 //color
