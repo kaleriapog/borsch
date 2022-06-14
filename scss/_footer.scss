@@ -1,0 +1,72 @@
+.footer {
+  background-color: $background-color;
+  color: $color-white;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 60px 0 25px 0;
+    border-bottom: 1px solid $color-white;
+    @extend %font-regular;
+
+    .logo {
+      margin-bottom: 25px;
+    }
+
+    li {
+      margin-right: 20px;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $color-hover-second;
+      }
+    }
+  }
+
+  &__logo, &__menu, &__contact{
+    padding-right: 50px;
+
+    @include media-tablet {
+      padding: 0 20px 50px;
+    }
+  }
+
+  &__menu-list {
+    columns: 2;
+    font-weight: 600;
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__contact {
+    li {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    @extend %font-icon;
+
+    li {
+      margin-right: 20px;
+    }
+  }
+
+  &__bottom {
+    padding: 25px 15px 15px;
+    text-align: center;
+
+    .rights {
+      @extend %font-rights;
+      opacity: 0.6;
+    }
+  }
+
+  span {
+    display: block;
+  }
+}

@@ -4,25 +4,30 @@ const tabProductMeat = document.getElementById('tab-product-meat')
 const tabProductVegan = document.getElementById('tab-product-vegan')
 const accordion = document.querySelector('.accordion-list')
 const items = accordion.querySelectorAll('.accordion-list-item')
+const ourDetailsIconClose = document.querySelector('.our-details-icon-close')
+const ourDetailsBlock = document.querySelector('.our-details')
+const ourDetailsTrigger = document.querySelectorAll('.open-our-details-trigger');
 
 // for tabs
-tabNavigationMeat.addEventListener('click', (el) => {
-    el.preventDefault()
-    tabNavigationMeat.classList.add('button-light-color')
-    tabNavigationVegan.classList.remove('button-light-color')
+if(tabNavigationMeat) {
+    tabNavigationMeat.addEventListener('click', (el) => {
+        el.preventDefault()
+        tabNavigationMeat.classList.add('button-light-color')
+        tabNavigationVegan.classList.remove('button-light-color')
 
-    tabProductMeat.classList.add('open-products')
-    tabProductVegan.classList.remove('open-products')
-})
+        tabProductMeat.classList.add('open-products')
+        tabProductVegan.classList.remove('open-products')
+    })
 
-tabNavigationVegan.addEventListener('click', (el) => {
-    el.preventDefault()
-    tabNavigationVegan.classList.add('button-light-color')
-    tabNavigationMeat.classList.remove('button-light-color')
+    tabNavigationVegan.addEventListener('click', (el) => {
+        el.preventDefault()
+        tabNavigationVegan.classList.add('button-light-color')
+        tabNavigationMeat.classList.remove('button-light-color')
 
-    tabProductMeat.classList.remove('open-products')
-    tabProductVegan.classList.add('open-products')
-})
+        tabProductMeat.classList.remove('open-products')
+        tabProductVegan.classList.add('open-products')
+    })
+}
 
 // for reviews slider
 const swiperReviews = new Swiper('.reviews__slider', {
@@ -70,37 +75,36 @@ const swiperMedia = new Swiper('.media-about-us__slider', {
 })
 
 // for accordion
-function toggleAccordion() {
-    let thisItem = this.closest('.accordion-list-item');
+if(document.querySelector('.accordion-list')) {
+    function toggleAccordion() {
+        let thisItem = this.closest('.accordion-list-item');
 
-    items.forEach(item => {
-        if (thisItem == item ) {
+        items.forEach(item => {
+            if (thisItem == item) {
 
-            thisItem.classList.toggle('open-accordion-item');
-            return;
-        }
+                thisItem.classList.toggle('open-accordion-item');
+                return;
+            }
 
-        item.classList.remove('open-accordion-item');
+            item.classList.remove('open-accordion-item');
 
+            console.log(thisItem)
+        });
         console.log(thisItem)
-    });
-    console.log(thisItem)
+    }
+
+    items.forEach(question => question.addEventListener('click', toggleAccordion))
 }
-
-items.forEach(question => question.addEventListener('click', toggleAccordion))
-
 //for open our-details
-const ourDetailsIconClose = document.querySelector('.our-details-icon-close')
-const ourDetailsBlock = document.querySelector('.our-details')
-const ourDetailsTrigger = document.querySelectorAll('.open-our-details-trigger');
-
-ourDetailsTrigger.forEach((elem) => {
-    elem.addEventListener('click', () => {
-        ourDetailsBlock.classList.add('open-our-details')
+if(ourDetailsTrigger) {
+    ourDetailsTrigger.forEach((elem) => {
+        elem.addEventListener('click', () => {
+            ourDetailsBlock.classList.add('open-our-details')
+        })
     })
-})
-
-ourDetailsIconClose.addEventListener('click', () => {
-    ourDetailsBlock.classList.remove('open-our-details')
-})
-
+}
+if(ourDetailsIconClose) {
+    ourDetailsIconClose.addEventListener('click', () => {
+        ourDetailsBlock.classList.remove('open-our-details')
+    })
+}

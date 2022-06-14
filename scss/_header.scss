@@ -1,0 +1,36 @@
+.header {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  &.header-white {
+    .header__inner {
+      color: $color-text-dark;
+    }
+  }
+
+  &__inner {
+    padding: 32px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $color-white;
+  }
+
+  &__menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include media-mobile {
+      display: none;
+    }
+
+    li {
+      margin: 0 24px;
+    }
+  }
+}
