@@ -315,6 +315,15 @@ h1, .main-title {
     .logo {
       margin-bottom: 25px;
     }
+
+    li {
+      margin-right: 20px;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $color-hover-second;
+      }
+    }
   }
 
   &__logo, &__menu, &__contact{
@@ -346,11 +355,6 @@ h1, .main-title {
 
     li {
       margin-right: 20px;
-      transition: all 0.3s;
-
-      &:hover {
-        color: $color-hover-second;
-      }
     }
   }
 
