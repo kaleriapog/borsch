@@ -273,6 +273,7 @@ h1, .main-title {
 
 .main {
   overflow: hidden;
+  padding-top: 130px;
 }
 
 .hero {
@@ -299,7 +300,7 @@ h1, .main-title {
   }
 
   &__inner {
-    padding: 200px 0 100px;
+    padding: 70px 0 100px;
     color: $color-white;
     font-size: 20px;
     line-height: 1.7;

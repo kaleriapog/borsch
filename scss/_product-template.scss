@@ -1,0 +1,43 @@
+.button-back {
+  &__icon-inner {
+    max-width: 15px;
+    width: 100%;
+    padding-right: 5px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.products-page {
+
+  &__main-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__images {
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .products-page-item {
+    display: flex;
+
+    &__title {
+      max-width: 40%;
+      width: 100%;
+    }
+
+    &__description {
+      max-width: 60%;
+      width: 100%;
+    }
+  }
+
+  .products-page-form {
+    display: flex;
+  }
+}
