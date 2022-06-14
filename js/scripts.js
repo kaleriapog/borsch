@@ -2,7 +2,10 @@ const tabNavigationMeat = document.getElementById('tab-navigation-meat')
 const tabNavigationVegan = document.getElementById('tab-navigation-vegan')
 const tabProductMeat = document.getElementById('tab-product-meat')
 const tabProductVegan = document.getElementById('tab-product-vegan')
+const accordion = document.querySelector('.accordion-list');
+const items = accordion.querySelectorAll('.accordion-list-item');
 
+// for tabs
 tabNavigationMeat.addEventListener('click', (el) => {
     el.preventDefault()
     tabNavigationMeat.classList.add('button-light-color')
@@ -21,6 +24,7 @@ tabNavigationVegan.addEventListener('click', (el) => {
     tabProductVegan.classList.add('open-products')
 })
 
+// for reviews slider
 const swiperReviews = new Swiper('.reviews__slider', {
     direction: 'horizontal',
     loop: true,
@@ -40,6 +44,7 @@ const swiperReviews = new Swiper('.reviews__slider', {
     },
 });
 
+// for media slider
 const swiperMedia = new Swiper('.media-about-us__slider', {
     direction: 'horizontal',
     loop: true,
@@ -63,3 +68,26 @@ const swiperMedia = new Swiper('.media-about-us__slider', {
         prevEl: '.media-about-us__button-prev',
     },
 });
+
+// for accordion
+function toggleAccordion() {
+    let thisItem = this.closest('.accordion-list-item');
+
+    items.forEach(item => {
+        if (thisItem == item ) {
+
+            thisItem.classList.toggle('open-accordion-item');
+            return;
+        }
+
+        item.classList.remove('open-accordion-item');
+
+        console.log(thisItem)
+    });
+    console.log(thisItem)
+}
+
+items.forEach(question => question.addEventListener('click', toggleAccordion));
+
+
+

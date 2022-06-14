@@ -5,6 +5,7 @@ $mediaWidthTablet: 991px;
 $mediaWidthTabletLarge: 1024px;
 $mediaWidthTabletHorizontal: 1024px;
 $mediaWidthLaptop: 1024px;
+$mediaWidth-1200: 1200px;
 
 @mixin media-tablet {
   @media (max-width: $mediaWidthTablet) {
@@ -41,6 +42,13 @@ $mediaWidthLaptop: 1024px;
     @content;
   }
 }
+
+@mixin media-1200 {
+  @media (max-width: $mediaWidth-1200) {
+    @content;
+  }
+}
+
 
 //font
 %font-style-header-menu {
@@ -176,18 +184,52 @@ $mediaWidthLaptop: 1024px;
   }
 }
 
+%accordion-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+%font-ribbon {
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-transform: uppercase;
+
+  @include media-laptop {
+    font-size: 40px;
+  }
+}
+
+%font-social {
+  font-family: 'icomoon';
+  font-size: 24px;
+}
+
+%font-rights {
+  font-size: 14px;
+  line-height: 1.57;
+}
+
 //color
 $color-white: #fff;
 $background-color-icon-regular: #fff;
 $background-color-icon-second: #EFF1F4;
 $background-color-icon-second-opacity:rgba(239, 241, 244, 0.4);
 $background-color: #DC384E;
+$background-color-image: #f7f7f7;
 $background-color-light: #F25570;
 $color-text-dark: #333333;
 $color-text-card-mark: #FFE180;
 $color-hover: #F25570;
 $color-hover-second: #F3CD46;
 $color-background-product: #F25570;
+$color-blue: #4740FF;
+$color-yellow: #F3CD46;
+$color-orange: #DE692B;
+$color-light-green: #62B766;
+$color-light-yellow: #F3CD46;
+
 
 //size
 $size-product-block: 385px;

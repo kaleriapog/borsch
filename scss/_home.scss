@@ -9,6 +9,7 @@ body {
   padding: 0 20px;
   margin: auto;
 }
+
 //button navigation for sliders
 .slider-button-navigation-group {
   display: flex;
@@ -61,6 +62,59 @@ body {
   &__inner {
     width: 30px;
     height: 30px;
+  }
+}
+
+//items
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 0 80px 10px;
+
+  @include media-1200 {
+    gap: 40px;
+  }
+
+  @include media-laptop {
+    gap: 15px;
+    padding: 0 0 10px;
+  }
+
+  @include media-mobile {
+    gap: 50px;
+  }
+
+  .item {
+    max-width: 28%;
+    width: 100%;
+    padding: 0 10px;
+    @extend %font-regular;
+
+    @include media-laptop {
+      max-width: 31%;
+    }
+
+    @include media-mobile {
+      max-width: 100%;
+    }
+
+    &__icon {
+      width: 62px;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      color: $color-white;
+      @extend %font-item-title;
+
+      span {
+        display: block;
+      }
+    }
   }
 }
 
@@ -129,8 +183,86 @@ h1, .main-title {
   @extend %font-item-title;
 }
 
+//colors
+.color-orange {
+  background-color: $color-orange;
+}
+
+.color-light-green {
+  background-color: $color-light-green;
+}
+
+.color-light-yellow {
+  background-color: $color-light-yellow;
+}
+
 .background-color {
   background-color: $background-color;
+}
+
+//accordion
+.accordion-list {
+
+  .accordion-list-item {
+    padding: 32px 0;
+    border-top: 1px solid $background-color-icon-second;
+    position: relative;
+    cursor: pointer;
+
+    &:last-child {
+      border-bottom: 1px solid $background-color-icon-second;
+    }
+
+    .accordion-text {
+      display: none;
+    }
+  }
+
+  .accordion-title {
+    @extend %accordion-title;
+  }
+
+  .accordion-text {
+    @extend %font-regular;
+    max-width: 800px;
+    padding-top: 18px;
+  }
+
+  .accordion-arrow {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 34px;
+    right: 0;
+    transition: all 0.3s;
+  }
+
+  & .open-accordion-item {
+    .accordion-text {
+      display: block;
+    }
+
+    .accordion-arrow {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+//logo
+.logo {
+  max-width: 60px;
+  width: 100%;
+}
+
+.menu {
+  li {
+    @extend %font-style-header-menu;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $color-hover-second;
+    }
+  }
 }
 
 .main {
@@ -164,13 +296,76 @@ h1, .main-title {
 
     li {
       margin: 0 24px;
-      @extend %font-style-header-menu;
+    }
+  }
+}
+
+.footer {
+  background-color: $background-color;
+  color: $color-white;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 60px 0 25px 0;
+    border-bottom: 1px solid $color-white;
+    @extend %font-regular;
+
+    .logo {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__logo, &__menu, &__contact{
+    padding-right: 50px;
+
+    @include media-tablet {
+      padding: 0 20px 50px;
+    }
+  }
+
+  &__menu-list {
+    columns: 2;
+    font-weight: 600;
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__contact {
+    li {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    @extend %font-social;
+
+    li {
+      margin-right: 20px;
       transition: all 0.3s;
 
       &:hover {
-      color: $color-hover-second;
+        color: $color-hover-second;
+      }
     }
+  }
+
+  &__bottom {
+    padding: 25px 15px 15px;
+    text-align: center;
+
+    .rights {
+      @extend %font-rights;
+      opacity: 0.6;
     }
+  }
+
+  span {
+    display: block;
   }
 }
 
@@ -714,6 +909,108 @@ h1, .main-title {
 
     &__text {
       @extend %media-text;
+    }
+  }
+}
+
+.faq {
+  background-color: $color-white;
+
+  &__inner {
+    padding: 100px 0;
+  }
+
+  &__title {
+    margin-bottom: 70px;
+    text-align: center;
+  }
+}
+
+.ribbons {
+  background-color: $color-white;
+  padding: 110px 0;
+  @extend %font-ribbon;
+
+  &__inner {
+    @include media-mobile {
+      transform: scale(0.4);
+    }
+  }
+
+  .ribbon {
+    min-width: 5000px;
+    color: $color-blue;
+    background-color: $color-yellow;
+    padding: 25px 0;
+    transform-origin: top left;
+    position: relative;
+    left: 50%;
+
+    @include media-laptop {
+      padding: 20px 0;
+    }
+
+    &.ribbon-top {
+      transform: rotate(8deg) translate(calc(-115px - 50%), 100px);
+      z-index: 1;
+    }
+
+    &.ribbon-bottom {
+      transform: rotate(-4deg) translate(calc(-77px - 50%), -50px);
+      color: $color-yellow;
+      background-color: $color-blue;
+    }
+    span {
+      display: inline-block;
+      padding: 0 50px;
+
+      @include media-laptop {
+        padding: 0 30px;
+      }
+    }
+  }
+}
+
+.prayer-for-soldiers {
+  background-color: $color-white;
+
+  &__inner {
+    padding: 105px 0 200px;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 70px;
+  }
+
+  &__image {
+    padding: 50px;
+    background-color: $background-color-image;
+    margin-bottom: 95px;
+  }
+
+  &__image-inner {
+    max-width: 355px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .item-title {
+    margin-bottom: 70px;
+  }
+
+  .button-group {
+    justify-content: center;
+    gap: 18px;
+
+    .button-regular {
+      border-color: $color-text-dark;
+    }
+
+    .button-main-color {
+      background-color: $background-color;
+      color: $color-white;
+      border-color: $background-color;
     }
   }
 }
