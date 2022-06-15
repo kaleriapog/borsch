@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="./images/logo.svg">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
+</head>
+<body>
+<header class="header header-white">
+    <div class="main-size">
+        <div class="header__inner">
+            <div class="logo">
+                <a href="#"><img src="./images/logo-red.svg" alt="logo"></a>
+            </div>
+            <div class="header__menu">
+                <div class="icon-cross icon-close-menu"></div>
+                <ul class="header__menu-list menu">
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="product-template.html">Продукти</a></li>
+                    <li><a href="#">Відгуки</a></li>
+                    <li><a href="#">Преса</a></li>
+                    <li class="open-our-details-trigger"><a href="#">Реквізити</a></li>
+                    <li><a href="#">Телеграм-бот</a></li>
+                </ul>
+            </div>
+            <div class="icon-regular icon-order-basket">
+                <div class="icon-regular__inner">
+                    <img src="./images/icons/order-basket.svg" alt="order basket">
+                </div>
+            </div>
+            <div class="menu-burger-icon-open">
+                <span class="menu-burger-icon-open__item"></span>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="main">
+    <div class="button-back">
+        <div class="main-size">
+            <a href="#" class="button-back__icon">
+                <div class="button-back__icon-inner">
+                    <img src="images/icons/arrow.svg">
+                </div>
+                <span>назад</span>
+            </a>
+        </div>
+    </div>
+   <section class="order-page">
+       <div class="main-size">
+           <div class="order-page__inner">
+               <h2 class="regular-title">Оформлення замовлення №456</h2>
+               <form class="form-order">
+                   <div class="form-order__item">
+                       <div class="form-order__image">
+                           <img src="./images/product.png" alt="Продукт">
+                       </div>
+                       <div class="form-order__name">
+                           <div class="products-stickers">
+                               <span class="products-stickers__item">5 порцій</span>
+                               <span class="products-stickers__item sticker-orange">М'ясний</span>
+                           </div>
+                           <h3 class="title-small">Коломийський борщ</h3>
+                       </div>
+                       <div class="form-order__select">
+                           <select class="form-select">
+                               <option value="value1">1</option>
+                               <option value="value1">2</option>
+                               <option value="value1">3</option>
+                               <option value="value1">4</option>
+                               <option value="value1">5</option>
+                           </select>
+                       </div>
+                       <div class="form-order__price">
+                           <span>150 <span>грн.</span></span>
+                       </div>
+                       <div class="form-order__remove">
+                           <div class="icon-remove"></div>
+                       </div>
+                   </div>
+                   <div class="form-order__item">
+                       <div class="form-order__image">
+                           <img src="./images/product.png" alt="Продукт">
+                       </div>
+                       <div class="form-order__name">
+                           <div class="products-stickers">
+                               <span class="products-stickers__item">5 порцій</span>
+                               <span class="products-stickers__item sticker-green">Веганський</span>
+                           </div>
+                           <h3 class="title-small">Бабусин суп</h3>
+                       </div>
+                       <div class="form-order__select">
+                           <select class="form-select">
+                               <option value="value1">1</option>
+                               <option value="value1">2</option>
+                               <option value="value1">3</option>
+                               <option value="value1">4</option>
+                               <option value="value1">5</option>
+                           </select>
+                       </div>
+                       <div class="form-order__price">
+                           <span>200 <span>грн.</span></span>
+                       </div>
+                       <div class="form-order__remove">
+                           <div class="icon-remove"></div>
+                       </div>
+                   </div>
+                   <div class="form-order__all-price">
+                       <span class="all-price-name">до сплати</span>
+                       <span class="all-price-number">350 грн.</span>
+                   </div>
+               </form>
+               <form class="form-contact-details">
+                   <h2 class="regular-title">Ваші контактні дані</h2>
+                   <div class="form-contact-details__items">
+                       <div class="form-contact-details__item">
+                           <label for="surname" class="main-form-label">Прізвище</label>
+                           <input id="surname" class="main-input" type="text">
+                       </div>
+                       <div class="form-contact-details__item">
+                           <label for="phone" class="main-form-label">Телефон</label>
+                           <input id="phone" class="main-input" type="tel">
+                       </div>
+                       <div class="form-contact-details__item">
+                           <label for="name" class="main-form-label">Ім'я</label>
+                           <input id="name" class="main-input" type="text">
+                       </div>
+                       <div class="form-contact-details__item">
+                           <label for="email" class="main-form-label">Email</label>
+                           <input id="email" class="main-input" type="email">
+                       </div>
+                   </div>
+               </form>
+               <div class="forms-block">
+                   <form class="form-half form-delivery">
+                       <h3 class="regular-title">Доставка</h3>
+                        <label class="radio-wrapper__label radio-wrapper main-input mark-color new-post" for="new-post">
+                            <input name="delivery" class="radio-wrapper__radio" id="new-post" value="new post" type="radio">
+                            Нова Пошта
+                        </label>
+                       <div class="form-half__select select-city">
+                           <label class="main-form-label" for="city">Ваше місто</label>
+                           <select class="form-select half-select" id="city">
+                               <option>Запоріжжя</option>
+                               <option>Київ</option>
+                               <option>Дніпро</option>
+                           </select>
+                       </div>
+                       <div class="form-half__select select-new-post-department">
+                           <label class="main-form-label" for="new-post-department">Відділення Нової Пошти</label>
+                           <select class="form-select half-select" id="new-post-department">
+                               <option>Відділення №29 (вул. Шкльна, 10)</option>
+                               <option>Пошта 2</option>
+                               <option>Пошта 3</option>
+                           </select>
+                       </div>
+                       <div class="form-half__self-pickup">
+                           <label class="radio-wrapper__label radio-wrapper main-input self-pickup" for="self-pickup">
+                               <input name="delivery" class="radio-wrapper__radio" id="self-pickup" value="self-pickup" type="radio">
+                               Самовивіз у Коломиї
+                           </label>
+                           <a class="form-half__location" href="#">
+                               <span class="location-image icon-location"></span>
+                               <span class="location-name">Адреса пункту самовивозу у м. Коломия</span>
+                           </a>
+                           <a class="form-half__location" href="#">
+                               <span class="location-image icon-location"></span>
+                               <span class="location-name">Адреса пункту самовивозу у м. Коломия</span>
+                           </a>
+                       </div>
+                   </form>
+                   <form class="form-half form-payment">
+                       <h3 class="regular-title">Оплата</h3>
+                       <label class="radio-wrapper__label radio-wrapper main-input payment-by-card mark-color" for="payment-by-card">
+                           <input name="payment" class="radio-wrapper__radio" id="payment-by-card" value="new post" type="radio">
+                           На картку ПриватБанку
+                       </label>
+                       <div class="form-text-block">
+                           <p class="form-text"><b>5168 7456 0989 1186</b> (Яворська О.)</p>
+                           <p class="form-text-small">Під час здійснення оплати, будь ласка, вкажіть цей номер заказу (№<span class="number-order">456</span>)</p>
+                       </div>
+                       <label class="radio-wrapper__label radio-wrapper main-input payment-in-cash" for="payment-in-cash">
+                           <input name="payment" class="radio-wrapper__radio" id="payment-in-cash" value="new post" type="radio">
+                           Готівкою при самовивозі
+                       </label>
+                   </form>
+               </div>
+               <div class="button-group form-button-group">
+                   <button class="button-regular form-button button-color">
+                       <span>Оформити замовлення</span>
+                   </button>
+               </div>
+           </div>
+       </div>
+   </section>
+</main>
+<footer class="footer">
+    <div class="main-size">
+        <div class="footer__inner">
+            <div class="footer__logo">
+                <div class="logo">
+                    <a href="#"><img src="./images/logo.svg" alt="logo"></a>
+                </div>
+                <span class="footer__text">Українські борщі для бійців ЗСУ</span>
+            </div>
+            <div class="footer__menu">
+                <ul class="footer__menu-list menu">
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="product-template.html">Продукти</a></li>
+                    <li><a href="#">Відгуки</a></li>
+                    <li><a href="#">Преса</a></li>
+                    <li class="open-our-details-trigger"><a href="#">Реквізити</a></li>
+                    <li><a href="#">Телеграм-бот</a></li>
+                </ul>
+            </div>
+            <div class="footer__contact">
+                <ul class="footer__contact-list">
+                    <li><a href="tel: +380685520273">+38(068) 552-02-73</a></li>
+                    <li><a href="mailto: kachuraknazar@gmail.com">kachuraknazar@gmail.com</a></li>
+                </ul>
+                <div class="footer__social">
+                    <ul class="footer__social-list">
+                        <li><a class="icon-telegram" href="#"></a></li>
+                        <li><a class="icon-facebook" href="#"></a></li>
+                        <li><a class="icon-instagram" href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <span class="rights">© Коломийський Борщ 2022. Всі права захищені</span>
+        </div>
+    </div>
+</footer>
+<div class="our-details">
+    <div class="our-details__inner">
+        <div class="icon-cross our-details-icon-close"></div>
+        <h2 class="regular-title">Наші реквізити</h2>
+        <p>Зробити пожертву на реквізити «Коломийського борщу». Ми передамо волонтерам паковання на вашу суму.</p>
+        <div class="our-details__items">
+            <dl class="our-details__item">
+                <dt class="our-details__item-name">Приватбанк:</dt>
+                <dd class="our-details__item-text"><b>5168 7456 0989 1186</b> (Яворська О.)</dd>
+            </dl>
+            <dl class="our-details__item">
+                <dt class="our-details__item-name">PayPal:</dt>
+                <dd class="our-details__item-text"><b>kotel0909@gmail.com</b> (на ім’я Olesia Yavorska)</dd>
+            </dl>
+            <dl class="our-details__item">
+                <dt class="our-details__item-name">Міжнародний банк:</dt>
+                <dd class="our-details__item-text"><b>LT51 3250 0160 5758 6052</b> (Revolut ID: @hryhorapy5; для SWIFT-переказів: Імʼя отримувача: Hryhorii Probytiuk, SWIFT-код банку: REVOLT21)</dd>
+            </dl>
+        </div>
+        <p>Окрім цього, ви можете просто купити індивідуальні паковання для себе чи родини. Приватним особам ми продаємо їх з націнкою у 12%, ці кошти також використовуємо на обіди для фронту.</p>
+    </div>
+</div>
+<script src="./swiper/swiper-bundle.min.js"></script>
+<script src="./js/scripts.js"></script>
+</body>
+</html>

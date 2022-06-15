@@ -47,26 +47,6 @@
       max-width: 300px;
     }
 
-    .products-stickers {
-      padding: 18px;
-      @extend %font-product-sticker;
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      &__item {
-        display: inline-block;
-        padding: 8px 16px;
-        margin-right: 12px;
-        background-color: $color-yellow;
-
-        &.sticker-orange {
-          color: $color-white;
-          background-color: $color-orange;
-        }
-      }
-    }
-
     .slider-product-images {
       z-index: 0;
       border: 1px solid #EFF1F4;
@@ -155,6 +135,13 @@
       flex-direction: column;
     }
 
+    .products-stickers {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 18px;
+    }
+
     &__title {
       max-width: 51.5%;
       width: 100%;
@@ -177,6 +164,28 @@
 
   .products-page-form {
     display: flex;
+  }
+}
+
+//stickers
+.products-stickers {
+  @extend %font-product-sticker;
+
+  &__item {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-right: 12px;
+    background-color: $color-yellow;
+
+    &.sticker-orange {
+      color: $color-white;
+      background-color: $color-orange;
+    }
+
+    &.sticker-green {
+      color: $color-white;
+      background-color: $color-light-green;
+    }
   }
 }
 
