@@ -1,3 +1,20 @@
+//logo
+.logo {
+  max-width: 60px;
+  width: 100%;
+}
+
+.menu {
+  li {
+    @extend %font-style-header-menu;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $color-hover-second;
+    }
+  }
+}
+
 .header {
   overflow: hidden;
   position: absolute;
@@ -9,6 +26,12 @@
   &.header-white {
     .header__inner {
       color: $color-text-dark;
+    }
+  }
+
+  .icon-order-basket {
+    @include media-laptop {
+      margin-left: auto;
     }
   }
 
@@ -25,12 +48,87 @@
     align-items: center;
     justify-content: space-between;
 
-    @include media-mobile {
-      display: none;
+    @include media-laptop {
+      flex-direction: column;
+    }
+
+    @include media-mobile-horizontal-small {
+      display: block;
+      columns: 2;
     }
 
     li {
       margin: 0 24px;
+
+      @include media-laptop {
+        margin: 0 0 40px;
+      }
+
+      @include media-mobile-horizontal {
+        margin: 0 0 20px;
+      }
+
+      @include media-mobile-horizontal-small {
+        margin: 0 0 20px;
+      }
     }
   }
+
+  &__menu {
+    .icon-close-menu {
+      display: none;
+
+      @include media-laptop {
+        display: block;
+        top: 40px;
+        right: 10px;
+      }
+    }
+
+    &.open-menu-mobile {
+      @include media-laptop {
+        transform: translateX(0);
+      }
+    }
+
+    @include media-laptop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $background-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(100%);
+      transition: all 1s;
+    }
+  }
+}
+
+// icon menu mobile
+.menu-burger-icon-open {
+  width: 30px;
+  height: 25px;
+  border-bottom: solid 1px $color-white;
+  border-top: solid 1px $color-white;
+  display: none;
+  align-items: center;
+  margin-left: 30px;
+
+  @include media-laptop {
+    display: flex;
+  }
+
+  &__item {
+    border-top: solid 1px $color-white;
+    display: block;
+    width: 100%;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }

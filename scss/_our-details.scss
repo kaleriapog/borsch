@@ -47,6 +47,11 @@
       padding: 50px 30px 30px;
       margin: 20px;
     }
+
+    @include media-mobile-horizontal {
+      overflow: scroll;
+      max-height: 90vh;
+    }
   }
 
   .regular-title {
@@ -97,4 +102,9 @@
   top: 20px;
   right: 25px;
   @extend %font-icon;
+
+  @include media-laptop {
+    top: -10px;
+    right: 5px;
+  }
 }

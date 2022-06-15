@@ -6,6 +6,24 @@ const accordion = document.querySelector('.accordion-list')
 const ourDetailsIconClose = document.querySelector('.our-details-icon-close')
 const ourDetailsBlock = document.querySelector('.our-details')
 const ourDetailsTrigger = document.querySelectorAll('.open-our-details-trigger');
+const menuBurgerIconOpen = document.querySelector('.menu-burger-icon-open')
+const menu = document.querySelector('.header__menu')
+const menuBurgerIconClose = document.querySelector('.icon-close-menu')
+
+// for open menu mobile
+if(menuBurgerIconOpen) {
+    menuBurgerIconOpen.addEventListener('click', () => {
+        menu.classList.add('open-menu-mobile')
+        document.body.classList.add('no-scroll')
+    })
+}
+
+if(menuBurgerIconClose) {
+    menuBurgerIconClose.addEventListener('click', () => {
+        menu.classList.remove('open-menu-mobile')
+        document.body.classList.remove('no-scroll')
+    })
+}
 
 // for tabs
 if(tabNavigationMeat) {

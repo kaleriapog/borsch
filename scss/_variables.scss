@@ -6,6 +6,8 @@ $mediaWidthTabletLarge: 1024px;
 $mediaWidthTabletHorizontal: 1024px;
 $mediaWidthLaptop: 1024px;
 $mediaWidth-1200: 1200px;
+$mediaWidthMobileHorizontalSmall: 560px;
+$mediaWidthMobileHorizontal: 700px;
 
 @mixin media-tablet {
   @media (max-width: $mediaWidthTablet) {
@@ -15,6 +17,18 @@ $mediaWidth-1200: 1200px;
 
 @mixin media-tablet-horizontal {
   @media (max-height: $mediaWidthTabletHorizontal) {
+    @content;
+  }
+}
+
+@mixin media-mobile-horizontal-small {
+  @media (max-height: $mediaWidthMobileHorizontalSmall) {
+    @content;
+  }
+}
+
+@mixin media-mobile-horizontal {
+  @media (max-height: $mediaWidthMobileHorizontal) {
     @content;
   }
 }
@@ -54,6 +68,14 @@ $mediaWidth-1200: 1200px;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.75;
+
+  @include media-laptop {
+    font-size: 25px;
+  }
+
+  @include media-mobile-horizontal-small {
+    font-size: 18px;
+  }
 }
 
 %font-main-title {
@@ -192,6 +214,10 @@ $mediaWidth-1200: 1200px;
 
 %font-icon {
   font-size: 24px;
+
+  @include media-laptop {
+    font-size: 50px;
+  }
 }
 
 %font-rights {

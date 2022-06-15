@@ -254,23 +254,6 @@ h1, .main-title {
   }
 }
 
-//logo
-.logo {
-  max-width: 60px;
-  width: 100%;
-}
-
-.menu {
-  li {
-    @extend %font-style-header-menu;
-    transition: all 0.3s;
-
-    &:hover {
-      color: $color-hover-second;
-    }
-  }
-}
-
 .main {
   overflow: hidden;
   padding-top: 130px;
