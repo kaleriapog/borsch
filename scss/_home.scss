@@ -140,6 +140,7 @@ body {
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s;
+  @extend %font-regular;
 
   &:hover {
     background-color: $color-hover;
