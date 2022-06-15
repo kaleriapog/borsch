@@ -122,9 +122,7 @@ if(accordion) {
 
             item.classList.remove('open-accordion-item');
 
-            console.log(thisItem)
         });
-        console.log(thisItem)
     }
 
     items.forEach(question => question.addEventListener('click', toggleAccordion))
