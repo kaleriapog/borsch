@@ -141,6 +141,7 @@ body {
   cursor: pointer;
   transition: all 0.3s;
   @extend %font-regular;
+  font-weight: 600;
 
   &:hover {
     background-color: $color-hover;
