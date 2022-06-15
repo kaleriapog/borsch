@@ -147,6 +147,10 @@
     padding: 28px 0;
     @extend %font-product-page-description;
 
+    &:last-child {
+      border-bottom: 1px solid $background-color-icon-second;
+    }
+
     @include media-mobile {
       flex-direction: column;
     }
