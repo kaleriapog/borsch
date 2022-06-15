@@ -26,6 +26,19 @@
   &.header-white {
     .header__inner {
       color: $color-text-dark;
+
+      @include media-laptop {
+        color: $color-white;
+      }
+    }
+
+    .menu-burger-icon-open {
+      border-bottom: solid 1px $color-text-dark;
+      border-top: solid 1px $color-text-dark;
+
+      &__item {
+        border-top: solid 1px $color-text-dark;
+      }
     }
   }
 

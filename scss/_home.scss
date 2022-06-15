@@ -2,6 +2,7 @@
 body {
   font-family: 'Montserrat';
   color: $color-text-dark;
+  @extend %font-regular;
 }
 .main-size {
   width: 100%;
@@ -820,6 +821,10 @@ h1, .main-title {
   background-color: $color-white;
   padding: 110px 0;
   @extend %font-ribbon;
+
+  @include media-mobile {
+    padding: 40px 0;
+  }
 
   &__inner {
     @include media-mobile {

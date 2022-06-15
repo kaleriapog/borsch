@@ -67,6 +67,7 @@ if(document.querySelector('.reviews__slider')) {
         },
     })
 }
+
 // for media slider
 if(document.querySelector('.media-about-us__slider')) {
     const swiperMedia = new Swiper('.media-about-us__slider', {
@@ -99,8 +100,9 @@ if(document.querySelector('.slider-product-images')) {
     const swiperProductTemplateImages = new Swiper(".slider-product-images", {
         pagination: {
             el: ".swiper-pagination",
-            dynamicBullets: true,
+            clickable: true,
         },
+        rewind: true,
     });
 }
 

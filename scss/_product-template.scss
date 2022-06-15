@@ -1,13 +1,18 @@
 .button-back {
+  padding-top: 20px;
+
   &__icon-inner {
     max-width: 15px;
     width: 100%;
-    padding-right: 5px;
+    margin-right: 10px;
   }
 
   &__icon {
     display: flex;
     align-items: center;
+    @extend %font-regular;
+    font-weight: 600;
+    opacity: 0.6;
   }
 }
 
@@ -16,28 +21,195 @@
   &__main-info {
     display: flex;
     justify-content: space-between;
+    padding: 25px 0 50px;
+
+    @include media-tablet {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__images {
     max-width: 500px;
     width: 100%;
+    position: relative;
+
+    @include media-1200 {
+      max-width: 400px;
+    }
+
+    @include media-tablet {
+      margin-bottom: 50px;
+    }
+
+    @include media-mobile {
+      max-width: 300px;
+    }
+
+    .products-stickers {
+      padding: 18px;
+      @extend %font-product-sticker;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &__item {
+        display: inline-block;
+        padding: 8px 16px;
+        margin-right: 12px;
+        background-color: $color-yellow;
+
+        &.sticker-orange {
+          color: $color-white;
+          background-color: $color-orange;
+        }
+      }
+    }
+
+    .slider-product-images {
+      z-index: 0;
+      border: 1px solid #EFF1F4;
+      min-height: 500px;
+
+      @include media-1200 {
+        min-height: 400px;
+      }
+
+      @include media-mobile {
+        min-height: 300px;
+      }
+    }
+
+    .swiper-pagination {
+     bottom: 15px!important;
+
+      .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        opacity: 0.5;
+        border: 1px solid $color-text-dark;
+        background-color: transparent;
+
+        &.swiper-pagination-bullet-active {
+          background-color: $color-text-dark;
+        }
+      }
+    }
+  }
+
+  &__description {
+    padding: 0 0 0 100px;
+    @extend %font-product-page-description;
+
+    @include media-laptop {
+      padding: 0 0 0 50px;
+    }
+
+    @include media-tablet {
+      padding: 0;
+    }
+
+    .regular-title {
+      margin-bottom: 35px;
+    }
+
+    .button-regular {
+      @extend %font-regular;
+      line-height: 2;
+      font-family: 'Montserrat';
+    }
+  }
+
+  &__price {
+    @extend %font-mini;
+    padding: 25px 0 35px;
+    font-family: 'NAMU';
+  }
+
+  &__characteristics {
+    padding: 30px 0 85px 0;
+
+    .regular-title {
+      @extend %font-mini;
+      margin-bottom: 36px;
+
+      @include media-mobile {
+        font-size: 28px;
+      }
+    }
   }
 
   .products-page-item {
     display: flex;
+    border-top: 1px solid $background-color-icon-second;
+    padding: 28px 0;
+    @extend %font-product-page-description;
+
+    @include media-mobile {
+      flex-direction: column;
+    }
 
     &__title {
-      max-width: 40%;
+      max-width: 51.5%;
       width: 100%;
+      font-weight: 600;
+
+      @include media-mobile {
+        max-width: 100%;
+      }
     }
 
     &__description {
-      max-width: 60%;
+      max-width: 48.5%;
       width: 100%;
+
+      @include media-mobile {
+        max-width: 100%;
+      }
     }
   }
 
   .products-page-form {
     display: flex;
+  }
+}
+
+//form
+.form-select {
+  max-width: 110px;
+  width: 100%;
+  min-height: 60px;
+  background-color: $background-color-icon-second;
+  background-image: url("./images/icons/simple-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 83% 50%;
+  padding: 14px;
+  @extend %font-regular;
+  font-family: 'MONTSERRAT';
+  font-weight: 600;
+  margin-right: 24px;
+  appearance: none;
+}
+
+//steps
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include media-mobile {
+    padding: 20px 0 0 0;
+    gap: 20px;
+  }
+
+  .step {
+    max-width: 125px;
+    max-height: 100px;
+
+    img {
+      object-fit: contain;
+    }
   }
 }
