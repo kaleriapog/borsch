@@ -28,7 +28,7 @@ $mediaWidthMobileHorizontal: 700px;
 }
 
 @mixin media-mobile-horizontal {
-  @media (max-height: $mediaWidthMobileHorizontal) {
+  @media (max-height: $mediaWidthMobileHorizontal) and (max-width: $mediaWidthMobile) {
     @content;
   }
 }
