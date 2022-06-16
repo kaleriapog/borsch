@@ -899,6 +899,11 @@ h1, .main-title {
 
     .button-regular {
       border-color: $color-text-dark;
+
+      &:hover {
+        border-color: $background-color-light;
+        color: $color-white;
+      }
     }
 
     .button-color {
