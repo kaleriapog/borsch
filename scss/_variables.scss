@@ -249,6 +249,13 @@ $mediaWidthMobileHorizontal: 700px;
   line-height: 1.7;
 }
 
+%font-error-form-text {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
 //color
 $color-white: #fff;
 $background-color-icon-regular: #fff;

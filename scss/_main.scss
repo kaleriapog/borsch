@@ -586,3 +586,16 @@ h1, .main-title {
     }
   }
 }
+
+.error-form {
+  input {
+    border-color: $background-color;
+  }
+
+  .error-form-text {
+    color: $background-color;
+    @extend %font-error-form-text;
+    display: block;
+    padding-top: 8px;
+  }
+}
