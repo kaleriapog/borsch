@@ -253,6 +253,15 @@
     max-width: 125px;
     max-height: 100px;
 
+    @include media-1200 {
+      width: 50%;
+      max-width: none;
+    }
+
+    @include media-mobile {
+      width: 45%;
+    }
+
     img {
       object-fit: contain;
     }
