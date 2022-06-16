@@ -78,12 +78,12 @@
 
 .we-work {
   &__inner {
-    padding: 105px 0;
+    padding: 105px 0 90px;
     color: $color-white;
     @extend %font-regular;
 
     @include media-tablet-large {
-      padding: 70px 0;
+      padding: 70px 0 0;
     }
   }
 
@@ -120,8 +120,31 @@
 }
 
 .new-recipe {
+  position: relative;
+
+  &::before, &::after {
+    content: '';
+    display: block;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  &::after {
+    top: 0;
+    background: no-repeat  url("./images/background-color-top.png") center top /cover;
+  }
+
+  &::before {
+    bottom: 0;
+    background: no-repeat  url("./images/background-color-bottom.png") center bottom /cover;
+
+  }
+
   &__inner {
-    padding: 280px 0 100px;
+    padding: 300px 0 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -129,7 +152,7 @@
     @extend %font-regular;
 
     @include media-tablet-large {
-      padding: 70px 0;
+      padding: 160px 0;
     }
 
     @include media-mobile {
@@ -177,14 +200,14 @@
 .numbers {
 
   &__inner {
-    padding: 35px 0 100px;
+    padding: 35px 0 210px;
     color: $color-white;
     max-width: 830px;
     width: 100%;
     margin: auto;
 
     @include media-tablet-large {
-      padding: 35px 0 70px;
+      padding: 35px 0 170px;
     }
   }
 
@@ -238,10 +261,11 @@
   &__inner {
     color: $color-white;
     text-align: center;
-    padding: 300px 0 200px;
+    padding: 180px 0 0;
+    margin-bottom: -90px;
 
     @include media-tablet {
-      padding: 100px 0 100px;
+      padding: 100px 0 0;
     }
 
     .button-group {
@@ -271,13 +295,29 @@
 }
 
 .reviews {
-  background-color: $color-white;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    background: no-repeat  url("./images/background-color-white-top.png") center top /cover;
+  }
 
   &__inner {
-    padding: 55px 0 105px;
+    padding: 345px 0 105px;
+
+    @include media-tablet {
+      padding: 270px 0 105px;
+    }
 
     @include  media-mobile {
-      padding: 50px 0;
+      padding: 200px 0;
     }
 
     .regular-title {

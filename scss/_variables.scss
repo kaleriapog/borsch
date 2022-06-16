@@ -22,7 +22,7 @@ $mediaWidthMobileHorizontal: 700px;
 }
 
 @mixin media-mobile-horizontal-small {
-  @media (max-height: $mediaWidthMobileHorizontalSmall) {
+  @media (max-height: $mediaWidthMobileHorizontalSmall) and (max-width: $mediaWidthTablet){
     @content;
   }
 }
