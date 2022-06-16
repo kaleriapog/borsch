@@ -145,7 +145,7 @@ if(accordion) {
         });
     }
 
-    items.forEach(question => question.addEventListener('click', toggleAccordion))
+    items.forEach(question => question.addEventListener('click touchstart', toggleAccordion))
 }
 
 //for open our-details
