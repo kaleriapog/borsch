@@ -369,6 +369,14 @@
 
   .media-item {
 
+    &__inner {
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
     &__image {
       max-height: 260px;
       width: 100%;
