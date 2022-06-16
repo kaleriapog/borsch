@@ -32,10 +32,6 @@
       margin-bottom: 0;
 
       @include media-tablet {
-        font-size: 24px;
-      }
-
-      @include media-mobile {
         font-size: 20px;
       }
     }
@@ -86,6 +82,10 @@
     max-width: 27%;
     width: 100%;
 
+    @include media-tablet {
+      max-width: 31%;
+    }
+
     @include media-mobile {
       max-width: 55%;
     }
@@ -104,6 +104,13 @@
     border-radius: 50%;
     font-size: 25px;
     background-color: $background-color-icon-second;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $background-color;
+      color: $color-white;
+    }
   }
 
   &__all-price {
@@ -367,6 +374,10 @@ input[type='radio']:checked::after {
   .form-button {
     max-width: 465px;
     margin: 0 100px 0 auto;
+
+    @include media-laptop {
+      margin: 0 auto;
+    }
   }
 }
 
