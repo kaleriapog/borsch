@@ -143,6 +143,7 @@ if(accordion) {
             item.classList.remove('open-accordion-item');
 
         });
+        console.log('sdfghjk')
     }
 
     items.forEach(question => question.addEventListener('click touchstart', toggleAccordion))
