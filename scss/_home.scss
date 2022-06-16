@@ -28,21 +28,18 @@ body {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: $background-color-icon-second-opacity;
+  background-color: $background-color-icon-second;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
+  font-size: 32px;
+  opacity: 0.6;
 
   &:hover {
-    background-color: $background-color-icon-second;
-  }
-
-  .slider-icon-navigation{
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
+    background-color: $background-color;
+    color: $color-white
   }
 
   &.button-next-slider {
@@ -59,11 +56,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &__inner {
-    width: 30px;
-    height: 30px;
-  }
+  color: $color-text-dark;
+  font-size: 32px;
 }
 
 //items
@@ -238,11 +232,10 @@ h1, .main-title {
   }
 
   .accordion-arrow {
-    width: 24px;
-    height: 24px;
     position: absolute;
     top: 34px;
     right: 0;
+    font-size: 22px;
     transition: all 0.3s;
   }
 
@@ -293,12 +286,12 @@ h1, .main-title {
     display: flex;
     justify-content: space-between;
 
-    @include media-tablet-large {
-      padding: 200px 0 100px;
-    }
-
     @include media-tablet {
       flex-direction: column;
+    }
+
+    @include media-mobile {
+      padding: 50px 0 50px;
     }
   }
 
@@ -481,13 +474,14 @@ h1, .main-title {
   &__item-number {
     @extend %font-title-number;
     display: block;
+    text-align: right;
 
     @include media-mobile {
       font-size: 50px;
     }
   }
 
-  &__number-name {
+  &__item-number-name {
     @extend %font-title-number-name;
     display: block;
 
@@ -636,10 +630,13 @@ h1, .main-title {
       width: 46px;
       height: 46px;
       background-color: $color-background-product;
+      transition: all 0.3s;
+      color: $color-white;
+      font-size: 22px;
 
-      &__inner {
-        width: 24px;
-        height: 24px;
+      &:hover {
+       background-color: $color-white;
+        color: $color-text-dark;
       }
     }
   }

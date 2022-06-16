@@ -53,13 +53,14 @@
 
   .icon-order-basket {
     position: relative;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
     cursor: pointer;
     font-size: 32px;
     color: $color-text-dark;
 
     &:hover {
       background-color: $background-color-light;
+      color: $color-white;
     }
 
     @include media-laptop {
