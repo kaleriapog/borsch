@@ -1,37 +1,3 @@
-.main-pop-up {
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.2s;
-  @extend %font-regular;
-
-  &.open-pop-up {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background: rgba(255, 255, 255, 0.6);
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-  }
-}
-
 .our-details{
     &__inner {
       max-width: 880px;
@@ -100,16 +66,3 @@
       font-weight: 400;
     }
   }
-
-  .icon-cross {
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    @extend %font-icon;
-
-    @include media-laptop {
-      top: -10px;
-      right: 5px;
-    }
-}

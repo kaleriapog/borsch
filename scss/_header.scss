@@ -1,24 +1,3 @@
-//logo
-.logo {
-  max-width: 60px;
-  width: 100%;
-
-  @include media-mobile {
-    max-width: 50px;
-  }
-}
-
-.menu {
-  li {
-    @extend %font-style-header-menu;
-    transition: all 0.3s;
-
-    &:hover {
-      color: $color-hover-second;
-    }
-  }
-}
-
 .header {
   overflow: hidden;
   position: fixed;
@@ -185,9 +164,4 @@
     display: block;
     width: 100%;
   }
-}
-
-.no-scroll {
-  overflow: hidden;
-  height: 100vh;
 }
