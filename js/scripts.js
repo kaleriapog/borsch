@@ -9,11 +9,10 @@ const ourDetailsTrigger = document.querySelectorAll('.open-our-details-trigger')
 const menuBurgerIconOpen = document.querySelector('.menu-burger-icon-open')
 const menu = document.querySelector('.header__menu')
 const menuBurgerIconClose = document.querySelector('.icon-close-menu')
-
-
 const thankOrderIconClose = document.querySelector('.thank-for-order-icon-close')
 const thankOrderBlock = document.querySelector('.thank-for-order')
 const thankOrderTrigger = document.querySelectorAll('.open-thank-for-order-trigger');
+const header = document.querySelector('.header')
 
 // for open menu mobile
 if(menuBurgerIconOpen) {
@@ -29,6 +28,22 @@ if(menuBurgerIconClose) {
         document.body.classList.remove('no-scroll')
     })
 }
+
+//for fixed header
+window.addEventListener('scroll', () => {
+    let scrollTop = window.pageYOffset ? window.pageYOffset : (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+
+    if (scrollTop >= 50) {
+        if (header.classList.contains('header-white')) {
+            header.classList.add('header-background-white')
+        } else {
+            header.classList.add('header-background')
+        }
+    } else {
+        header.classList.remove('header-background')
+        header.classList.remove('header-background-white')
+    }
+})
 
 // for tabs
 if(tabNavigationMeat) {
@@ -142,6 +157,7 @@ if(ourDetailsTrigger) {
         })
     })
 }
+
 if(ourDetailsIconClose) {
     ourDetailsIconClose.addEventListener('click', () => {
         ourDetailsBlock.classList.remove('open-pop-up')
@@ -158,6 +174,7 @@ if(thankOrderTrigger) {
         })
     })
 }
+
 if(thankOrderIconClose) {
     thankOrderIconClose.addEventListener('click', () => {
         thankOrderBlock.classList.remove('open-pop-up')
