@@ -41,9 +41,7 @@
     <div class="button-back">
         <div class="main-size">
             <a href="#" class="button-back__icon">
-                <div class="button-back__icon-inner">
-                    <img src="images/icons/arrow.svg">
-                </div>
+                <div class="button-back__icon-inner icon-arrow-basic"> </div>
                 <span>назад</span>
             </a>
         </div>
@@ -60,7 +58,7 @@
                        <div class="form-order__name">
                            <div class="products-stickers">
                                <span class="products-stickers__item">5 порцій</span>
-                               <span class="products-stickers__item sticker-orange">М'ясний</span>
+                               <span class="products-stickers__item sticker-light-red">М'ясний</span>
                            </div>
                            <h3 class="title-small">Коломийський борщ</h3>
                        </div>
@@ -188,7 +186,7 @@
                    </form>
                </div>
                <div class="button-group form-button-group">
-                   <button class="button-regular form-button button-color">
+                   <button class="button-regular form-button button-color open-thank-for-order-trigger">
                        <span>Оформити замовлення</span>
                    </button>
                </div>
@@ -234,9 +232,9 @@
         </div>
     </div>
 </footer>
-<div class="our-details">
+<div class="our-details main-pop-up">
     <div class="our-details__inner">
-        <div class="icon-cross our-details-icon-close"></div>
+        <div class="icon-cross our-details-icon-close pop-up-icon-close"></div>
         <h2 class="regular-title">Наші реквізити</h2>
         <p>Зробити пожертву на реквізити «Коломийського борщу». Ми передамо волонтерам паковання на вашу суму.</p>
         <div class="our-details__items">
@@ -254,6 +252,21 @@
             </dl>
         </div>
         <p>Окрім цього, ви можете просто купити індивідуальні паковання для себе чи родини. Приватним особам ми продаємо їх з націнкою у 12%, ці кошти також використовуємо на обіди для фронту.</p>
+    </div>
+</div>
+<div class="thank-for-order main-pop-up">
+    <div class="thank-for-order__inner">
+        <div class="icon-cross pop-up-icon-close thank-for-order-icon-close"></div>
+        <div class="thank-for-order__image">
+            <img src="./images/thanks.png" alt="Дякую">
+        </div>
+        <h2 class="regular-title">Дякуємо за замовлення!</h2>
+        <p class="thank-for-order__text">Ви сказали справжнє «Смачного!» військовим, собі чи рідним людям, для кого замовили перші страви.</p>
+        <div class="button-group">
+            <a href="./index.html" class="button-regular button-color">
+                <span>На головну</span>
+            </a>
+        </div>
     </div>
 </div>
 <script src="./swiper/swiper-bundle.min.js"></script>

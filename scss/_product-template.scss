@@ -10,6 +10,9 @@
     max-width: 15px;
     width: 100%;
     margin-right: 10px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
   }
 
   &__icon {
@@ -202,9 +205,9 @@
     margin-right: 12px;
     background-color: $color-yellow;
 
-    &.sticker-orange {
+    &.sticker-light-red {
       color: $color-white;
-      background-color: $color-orange;
+      background-color: $background-color-light;
     }
 
     &.sticker-green {

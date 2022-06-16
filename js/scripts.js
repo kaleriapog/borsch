@@ -10,6 +10,11 @@ const menuBurgerIconOpen = document.querySelector('.menu-burger-icon-open')
 const menu = document.querySelector('.header__menu')
 const menuBurgerIconClose = document.querySelector('.icon-close-menu')
 
+
+const thankOrderIconClose = document.querySelector('.thank-for-order-icon-close')
+const thankOrderBlock = document.querySelector('.thank-for-order')
+const thankOrderTrigger = document.querySelectorAll('.open-thank-for-order-trigger');
+
 // for open menu mobile
 if(menuBurgerIconOpen) {
     menuBurgerIconOpen.addEventListener('click', () => {
@@ -132,12 +137,30 @@ if(accordion) {
 if(ourDetailsTrigger) {
     ourDetailsTrigger.forEach((elem) => {
         elem.addEventListener('click', () => {
-            ourDetailsBlock.classList.add('open-our-details')
+            ourDetailsBlock.classList.add('open-pop-up')
+            document.body.classList.add('no-scroll')
         })
     })
 }
 if(ourDetailsIconClose) {
     ourDetailsIconClose.addEventListener('click', () => {
-        ourDetailsBlock.classList.remove('open-our-details')
+        ourDetailsBlock.classList.remove('open-pop-up')
+        document.body.classList.remove('no-scroll')
+    })
+}
+
+//for open thank-for-order
+if(thankOrderTrigger) {
+    thankOrderTrigger.forEach((elem) => {
+        elem.addEventListener('click', () => {
+            thankOrderBlock.classList.add('open-pop-up')
+            document.body.classList.add('no-scroll')
+        })
+    })
+}
+if(thankOrderIconClose) {
+    thankOrderIconClose.addEventListener('click', () => {
+        thankOrderBlock.classList.remove('open-pop-up')
+        document.body.classList.remove('no-scroll')
     })
 }

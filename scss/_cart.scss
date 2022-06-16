@@ -370,5 +370,84 @@ input[type='radio']:checked::after {
   }
 }
 
+.thank-for-order {
+
+  &__inner {
+    max-width: 880px;
+    width: 100%;
+    margin: auto;
+    background-color: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    border: 1px solid rgba(51, 51, 51, 0.1);
+    text-align: center;
+    position: relative;
+
+    @include media-laptop {
+      max-width: 90vw;
+    }
+
+    @include media-mobile {
+      max-width: 90vw;
+      padding: 20px;
+    }
+
+    @include media-mobile-horizontal {
+      max-height: 90vh;
+      padding: 15px;
+    }
+
+    @media (max-height: 700px) and (max-width: 991px) {
+      padding: 20px;
+    }
+  }
+
+  &__image {
+    max-width: 200px;
+    margin-bottom: 40px;
+
+    @include media-mobile {
+      max-width: 40vw;
+      margin-bottom: 20px;
+    }
+
+    @media (max-height: 700px) and (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  .regular-title {
+    margin-bottom: 32px;
+    @extend %font-mini;
+
+    @include media-mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    max-width: 565px;
+
+    @include media-mobile {
+      max-width: 100%;
+    }
+  }
+
+  .button-group {
+    padding-top: 54px;
+
+    @include media-mobile {
+      padding-top: 24px;
+    }
+
+    .button-regular {
+      padding: 16px 35px;
+    }
+  }
+}
+
 
 
