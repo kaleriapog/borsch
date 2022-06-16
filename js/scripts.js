@@ -134,8 +134,7 @@ if(accordion) {
         let thisItem = this.closest('.accordion-list-item');
 
         items.forEach(item => {
-            if (thisItem == item) {
-
+            if (thisItem === item) {
                 thisItem.classList.toggle('open-accordion-item');
                 return;
             }
@@ -143,10 +142,9 @@ if(accordion) {
             item.classList.remove('open-accordion-item');
 
         });
-        console.log('sdfghjk')
     }
 
-    items.forEach(question => question.addEventListener('click touchstart', toggleAccordion))
+    items.forEach(question => question.addEventListener('click', toggleAccordion))
 }
 
 //for open our-details
