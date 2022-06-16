@@ -43,8 +43,34 @@
   }
 
   .icon-order-basket {
+    position: relative;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    font-size: 32px;
+    color: $color-text-dark;
+
+    &:hover {
+      background-color: $background-color-light;
+    }
+
     @include media-laptop {
       margin-left: auto;
+    }
+
+    .icon-order-basket-number {
+      border-radius: 50%;
+      background-color: $background-color;
+      padding: 2px;
+      @extend  %font-regular;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-white;
+      height: 24px;
+      width: 24px;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 

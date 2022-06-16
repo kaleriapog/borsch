@@ -36,8 +36,16 @@
     columns: 2;
     font-weight: 600;
 
+    @include media-mobile {
+      columns: 1;
+    }
+
     li {
       margin-bottom: 15px;
+
+      a {
+        font-size: 20px;
+      }
     }
   }
 

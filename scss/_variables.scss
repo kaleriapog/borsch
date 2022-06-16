@@ -228,6 +228,10 @@ $mediaWidthMobileHorizontal: 700px;
 %font-mini {
   font-size: 48px;
   line-height: 1.2;
+
+  @include media-mobile-small {
+    font-size: 35px;
+  }
 }
 
 %font-product-sticker {
