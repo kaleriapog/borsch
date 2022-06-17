@@ -22,7 +22,7 @@
   }
 
   &__inner {
-    padding: 70px 0 100px;
+    padding: 70px 0 0;
     color: $color-white;
     font-size: 20px;
     line-height: 1.7;
@@ -34,7 +34,7 @@
     }
 
     @include media-mobile {
-      padding: 50px 0 50px;
+      padding: 50px 0 0;
     }
   }
 
@@ -78,11 +78,15 @@
 
 .we-work {
   &__inner {
-    padding: 105px 0 90px;
+    padding: 205px 0 90px;
     color: $color-white;
     @extend %font-regular;
 
     @include media-tablet-large {
+      padding: 150px 0 0;
+    }
+
+    @include media-mobile {
       padding: 70px 0 0;
     }
   }
@@ -310,14 +314,14 @@
   }
 
   &__inner {
-    padding: 345px 0 105px;
+    padding: 345px 0 55px;
 
     @include media-tablet {
-      padding: 270px 0 105px;
+      padding: 270px 0 0;
     }
 
     @include  media-mobile {
-      padding: 200px 0;
+      padding: 200px 0 100px;
     }
 
     .regular-title {
@@ -395,10 +399,10 @@
   background-color: $color-white;
 
   &__inner {
-    padding: 100px 0;
+    padding: 150px 0;
 
     @include  media-mobile {
-      padding: 50px 0;
+      padding: 100px 0 50px;
     }
 
     .regular-title {

@@ -13,6 +13,8 @@ const thankOrderIconClose = document.querySelector('.thank-for-order-icon-close'
 const thankOrderBlock = document.querySelector('.thank-for-order')
 const thankOrderTrigger = document.querySelectorAll('.open-thank-for-order-trigger');
 const header = document.querySelector('.header')
+const anchors = document.querySelectorAll('a[href*="#"]')
+const arrItemsMenuHeader = document.querySelectorAll('.header-red .header__menu-list li')
 
 // for open menu mobile
 if(menuBurgerIconOpen) {
@@ -178,5 +180,30 @@ if(thankOrderIconClose) {
     thankOrderIconClose.addEventListener('click', () => {
         thankOrderBlock.classList.remove('open-pop-up')
         document.body.classList.remove('no-scroll')
+    })
+}
+
+//for scroll in to view
+for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        if(!anchor.getAttribute('href').substr( 1).length) return;
+
+        const blockID = anchor.getAttribute('href').substr(1)
+
+        document.getElementById(blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    })
+}
+
+if (window.matchMedia("(max-width: 1024px)")) {
+    arrItemsMenuHeader.forEach((itemMenu) => {
+        itemMenu.addEventListener('click', () => {
+            menu.classList.remove('open-menu-mobile')
+            document.body.classList.remove('no-scroll')
+        })
     })
 }
